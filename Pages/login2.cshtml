@@ -2,84 +2,101 @@
 @model WebApplication110.Pages.login2Model
 
 @{
+    // Define la página de diseño que se usará para la página de login
     Layout = "_Layout-login";
-    <div class="container">
+}
 
-        <!-- Outer Row -->
-        <div class="row justify-content-center">
+<!-- Contenedor principal de la página de login -->
+<div class="container">
 
-            <div class="col-xl-10 col-lg-12 col-md-9">
+    <!-- Fila exterior para centrar el formulario de login -->
+    <div class="row justify-content-center">
 
-                <div class="card o-hidden border-0 shadow-lg my-5">
-                    <div class="card-body p-0">
-                        <!-- Nested Row within Card Body -->
-                        <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                            <div class="col-lg-6">
-                                <div class="p-5">
-                                    <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+        <div class="col-xl-10 col-lg-12 col-md-9">
+            <!-- Tarjeta para el formulario de login con efecto de sombra -->
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Fila interna dentro del cuerpo de la tarjeta -->
+                    <div class="row">
+                        <!-- Lado izquierdo con imagen de fondo para pantallas grandes -->
+                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+
+                        <!-- Lado derecho con el formulario -->
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <!-- Mensaje de bienvenida -->
+                                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                </div>
+
+                                <!-- Formulario de login -->
+                                <form class="user">
+                                    <!-- Campo de entrada para el correo electrónico -->
+                                    <div class="form-group">
+                                        <input type="email" class="form-control form-control-user"
+                                               id="exampleInputEmail" aria-describedby="emailHelp"
+                                               placeholder="Enter Email Address...">
                                     </div>
-                                    <form class="user">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                   id="exampleInputEmail" aria-describedby="emailHelp"
-                                                   placeholder="Enter Email Address...">
+                                    <!-- Campo de entrada para la contraseña -->
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user"
+                                               id="exampleInputPassword" placeholder="Password">
+                                    </div>
+                                    <!-- Casilla de verificación para "Recordarme" -->
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox small">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck">
+                                            <label class="custom-control-label" for="customCheck">
+                                                Remember Me
+                                            </label>
                                         </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                   id="exampleInputPassword" placeholder="Password">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">
-                                                    Remember
-                                                    Me
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                        </a>
-                                        <hr>
-                                        <a href="index.html" class="btn btn-google btn-user btn-block">
-                                            <i class="fab fa-google fa-fw"></i> Login with Google
-                                        </a>
-                                        <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                            <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                        </a>
-                                    </form>
+                                    </div>
+                                    <!-- Botón para hacer login -->
+                                    <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                        Login
+                                    </a>
                                     <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="register.html">Create an Account!</a>
-                                    </div>
+                                    <!-- Botón para login con Google -->
+                                    <a href="index.html" class="btn btn-google btn-user btn-block">
+                                        <i class="fab fa-google fa-fw"></i> Login with Google
+                                    </a>
+                                    <!-- Botón para login con Facebook -->
+                                    <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                        <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                                    </a>
+                                </form>
+
+                                <hr>
+                                <!-- Enlaces para recuperación de contraseña y creación de cuenta -->
+                                <div class="text-center">
+                                    <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                </div>
+                                <div class="text-center">
+                                    <a class="small" href="register.html">Create an Account!</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
 
     </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</div>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<!-- Archivos JavaScript principales de Bootstrap -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+<!-- JavaScript principal del plugin de animación de easing -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Scripts personalizados para todas las páginas -->
+<script src="js/sb-admin-2.min.js"></script>
 }
-<!-- Update Section -->
+
+<!-- Sección de actualizaciones -->
 <div class="updates">
     <h3>Actualizaciones</h3>
     <ul>
@@ -90,38 +107,38 @@
     </ul>
 </div>
 
-<!-- CSS for Styling -->
+<!-- Estilo CSS personalizado para la sección de actualizaciones -->
 <style>
     .updates {
-        background-color: #f4f4f9; /* Fondo suave */
+        background-color: #f4f4f9; /* Fondo de color suave */
         padding: 15px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-        max-width: 500px; /* Reducción del tamaño */
-        margin: 10px auto; /* Mover más arriba */
+        max-width: 500px; /* Limitar el tamaño de la caja de actualizaciones */
+        margin: 10px auto; /* Centrar la caja verticalmente */
         font-family: Arial, sans-serif; /* Fuente legible */
     }
 
         .updates h3 {
-            font-size: 1.6em; /* Reducir tamaño de fuente del título */
+            font-size: 1.6em; /* Tamaño de fuente ligeramente más pequeño para el título */
             color: #333333; /* Color oscuro para el título */
             margin-bottom: 10px;
-            text-align: center; /* Centrado del título */
+            text-align: center; /* Título centrado */
         }
 
         .updates ul {
-            list-style-type: none; /* Eliminar viñetas */
+            list-style-type: none; /* Eliminar viñetas de la lista */
             padding: 0;
         }
 
         .updates li {
-            font-size: 1em; /* Fuente ligeramente más pequeña */
+            font-size: 1em; /* Fuente ligeramente más pequeña para los elementos de la lista */
             color: #555555; /* Texto gris oscuro */
             margin-bottom: 10px;
-            line-height: 1.5; /* Espaciado entre líneas */
+            line-height: 1.5; /* Espaciado entre líneas para mejor lectura */
         }
 
             .updates li strong {
-                color: #007bff; /* Resaltar fechas con color azul */
+                color: #007bff; /* Resaltar las fechas con color azul */
             }
 </style>
